@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-import social from "../sanity/schemas/social";
 import { Social } from "../typings";
 import { NavLink } from "./NavLink";
 
