@@ -48,8 +48,8 @@ export default function ExperienceCard({ experience }: Props) {
             : new Date(experience.dateEnded).toDateString()}
         </p>
         <ul className="list-disc space-y-4 ml-5 text-lg">
-          {experience.details.map((detail) => (
-            <li>{detail}</li>
+          {experience.details.map((detail, index) => (
+            <li key={index}>{detail}</li>
           ))}
         </ul>
       </div>
