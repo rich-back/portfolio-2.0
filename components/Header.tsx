@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { Social } from "../typings";
-import { NavLink } from "./NavLink";
 
 type Props = {
   socials: Social[];
@@ -42,10 +41,6 @@ export default function Header({ socials }: Props) {
           />
         ))}
       </motion.div>
-
-      {/* <div className="">
-          <NavLink></NavLink>
-      </div> */}
 
       <motion.div
         initial={{
