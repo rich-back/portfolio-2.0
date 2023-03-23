@@ -14,7 +14,6 @@ export default function Hero({ pageInfo }: Props) {
     words: [
       `{ Hello! This is ${pageInfo?.name} }`,
       "{ Welcome to my portfolio... }",
-      "{ please have a look around. }",
     ],
     loop: true,
     typeSpeed: 100,
