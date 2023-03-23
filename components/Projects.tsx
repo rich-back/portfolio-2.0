@@ -21,10 +21,10 @@ export default function Projects({ projects }: Props) {
       </h3>
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-        {projects.map((project, index) => (
+        {projects?.map((project, index) => (
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-7 items-center justify-center p-20 md:p-44 h-screen"
-            key={project._id}
+            key={project?._id}
           >
             <motion.img
               initial={{
@@ -35,16 +35,16 @@ export default function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="max-w-[350px] rounded-lg"
-              src={urlFor(project.projectImage).url()}
+              src={urlFor(project?.projectImage).url()}
               alt="project screenshot"
             />
             <div className="space-y-3 md:space-y-10 lg:space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-3xl font-semibold text-center">
-                Project {index + 1} : <span className="underline decoration-red-400">&nbsp;{project.title}&nbsp;</span>
+                Project {index + 1} : <span className="underline decoration-red-400">&nbsp;{project?.title}&nbsp;</span>
                 <span>
                   <SocialIcon
                     className="scale-125 hover:scale-150 transition-all"
-                    url={project.linkToBuild}
+                    url={project?.linkToBuild}
                     fgColor="#f87171"
                     bgColor="transparent"
                     target={"_blank"}
@@ -52,17 +52,17 @@ export default function Projects({ projects }: Props) {
                 </span>
               </h4>
               <div className="flex space-x-6 my-2 justify-center">
-                {project.technologies.map((technology) => (
+                {project?.technologies?.map((technology) => (
                   <img
-                    key={technology._id}
+                    key={technology?._id}
                     className="w-10 h-10 lg:w-12 lg:h-12 object-contain p-1 bg-gray-300/40 rounded-md"
-                    src={urlFor(technology.skillImage).url()}
-                    alt={`${technology.title} logo`}
+                    src={urlFor(technology?.skillImage).url()}
+                    alt={`${technology?.title} logo`}
                   />
                 ))}
               </div>
               <p className="text-md text-center w-lg md:max-w-lg lg:max-w-lg ">
-                {project.summary}
+                {project?.summary}
               </p>
             </div>
           </div>

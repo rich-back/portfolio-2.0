@@ -30,11 +30,11 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center"
       >
         {/* Icons */}
-        {socials.map((social) => (
+        {socials?.map((social) => (
           <SocialIcon
             className="hover:scale-125 transition-all"
-            key={social._id}
-            url={social.url}
+            key={social?._id}
+            url={social?.url}
             fgColor="gray"
             bgColor="transparent"
             target={"_blank"}

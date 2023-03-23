@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import experience from "../sanity/schemas/experience";
 import { Experience } from "../typings";
 import ExperienceCard from "./ExperienceCard";
 

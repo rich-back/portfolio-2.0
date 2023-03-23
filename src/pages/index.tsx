@@ -24,13 +24,7 @@ type Props = {
   projects: Project[];
   socials: Social[];
 };
-export default function Home({
-  pageInfo,
-  experiences,
-  skills,
-  projects,
-  socials,
-}: Props) {
+const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
     <div className="bg-[rgb(10,10,10)] bg-[radial-gradient(_rgba(255,255,255,0.2)_5.5%,transparent_6%_)] lg:bg-size-custom md:bg-size-custom bg-size-custom-mb text-white/75 h-screen snap-y snap-mandatory overflow-x-hidden z-0">
       <Head>
@@ -100,7 +94,7 @@ export default function Home({
       </footer>
     </div>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
@@ -120,3 +114,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     revalidate: 10,
   };
 };
+export default Home;

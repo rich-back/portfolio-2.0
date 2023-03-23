@@ -26,8 +26,7 @@ export default function About({ pageInfo }: Props) {
         }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        // src="https://www.akc.org/wp-content/uploads/2017/11/Nova-Scotia-Duck-Tolling-Retriever-slide1.jpg"
-        src={urlFor(pageInfo.profilePic).url()}
+        src={urlFor(pageInfo?.profilePic).url()}
         alt="about section photo"
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-72 md:h-96 xl:w-[400px] xl:h-[500px]"
       />

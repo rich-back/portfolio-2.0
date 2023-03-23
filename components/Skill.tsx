@@ -20,8 +20,8 @@ export default function Skill({ skill, directionLeft }: Props) {
         }}
         transition={{ duration: 2 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
-        src={urlFor(skill.skillImage).url()}
-        alt={`${skill.title} logo`}
+        src={urlFor(skill?.skillImage).url()}
+        alt={`${skill?.title} logo`}
       />
     </div>
   );

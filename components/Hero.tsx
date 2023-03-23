@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { urlFor } from "../sanity";
@@ -11,7 +10,7 @@ type Props = {
 };
 
 export default function Hero({ pageInfo }: Props) {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: [
       `{ Hello! This is ${pageInfo?.name} }`,
       "{ Welcome to my portfolio... }",
