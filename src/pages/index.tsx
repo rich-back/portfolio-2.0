@@ -26,7 +26,7 @@ type Props = {
 };
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div className="bg-[rgb(10,10,10)] bg-[radial-gradient(_rgba(255,255,255,0.2)_5.5%,transparent_6%_)] lg:bg-size-custom md:bg-size-custom bg-size-custom-mb text-white/75 h-screen snap-y snap-mandatory overflow-x-hidden z-0">
+    <div className="bg-[rgb(4,3,3)] bg-[radial-gradient(_rgba(255,255,255,0.2)_5.5%,transparent_6%_)] lg:bg-size-custom md:bg-size-custom bg-size-custom-mb text-white/75 h-screen snap-y snap-mandatory overflow-x-hidden z-0">
       <Head>
         <title>RJB - Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
