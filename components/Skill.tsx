@@ -10,11 +10,11 @@ type Props = {
 
 export default function Skill({ skill, directionLeft }: Props) {
   return (
-    <div className="group relative flex cursor-pointer">
+    <div className="relative flex cursor-pointer">
       <motion.img
-        className="w-14 h-14 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-md p-2 object-contain border border-gray-500"
+        className="w-14 h-14 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-md p-[5px] object-contain border border-gray-500"
         initial={{
-          x: directionLeft ? 150 : -150,
+          x: directionLeft ? 120 : -120,
           opacity: 0,
           scale: 0,
         }}

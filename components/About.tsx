@@ -4,7 +4,7 @@ import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 
 type Props = {
-  pageInfo: PageInfo
+  pageInfo: PageInfo;
 };
 
 export default function About({ pageInfo }: Props) {
@@ -13,9 +13,11 @@ export default function About({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-1 md:px-6 justify-center mx-auto space-y-4 md:space-y-0 items-center"
     >
-
+      <h3 className="absolute top-[60px] md:top-16 uppercase tracking-[14px] md:tracking-[18px] text-gray-500 text-lg md:text-2xl">
+        &nbsp;about
+      </h3>
       <motion.img
         initial={{
           x: -200,
@@ -28,26 +30,25 @@ export default function About({ pageInfo }: Props) {
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
         alt="about section photo"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-72 md:h-96 xl:w-[400px] xl:h-[500px]"
+        className="md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-72 md:h-96 xl:w-[400px] xl:h-[500px]"
       />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="space-y-10 px-0 md:px-10"
+        className="space-y-0 md:space-y-10 px-0 md:px-10"
       >
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-xl mb-2 md:text-4xl font-semibold">
           A <span className="underline decoration-red-400">wee bit</span> about
           me...
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non
-          molestie mauris. Fusce diam nunc, pharetra pharetra tortor vel,
-          sagittis congue nisi. Aenean sollicitudin dui vel scelerisque
-          convallis. Morbi at eros sit amet magna consequat aliquet. Aliquam
-          erat volutpat. Vivamus sagittis purus ac felis lobortis condimentum.
-          Vestibulum vitae mollis lacus.
-        </p>
+        <div className="space-y-2 md:space-y-5">
+          {pageInfo?.backgroundInfo?.map((block) => (
+            <p key={block._key} className="text-sm md:text-[16px]">
+              {block.children[0].text}
+            </p>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -24,7 +24,8 @@ export default {
     {
       name: 'backgroundInfo',
       title: 'BackgroundInfo',
-      type: 'string',
+      type: 'array',
+      of: [{type: 'block'}]
     },
     {
       name: 'profilePic',

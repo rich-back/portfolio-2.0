@@ -40,10 +40,10 @@ export default function Hero({ pageInfo }: Props) {
         alt="profile photo"
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[14px]">
+        <h2 className="text-xs md:text-lg uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[14px]">
           &nbsp;{pageInfo?.role}
         </h2>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold px-10 pt-5">
+        <h1 className="text-xl md:text-3xl font-semibold px-10 pt-5">
           <span>{text}</span>
           <Cursor cursorColor="white" />
         </h1>
